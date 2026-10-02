@@ -1,0 +1,19 @@
+name: rock
+
+services:
+  rock:
+    container_name: rock
+    image: localhost/rock:latest
+    build:
+      context: .
+      dockerfile: container/rock.dockerfile
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - rock-config:/etc/searxng:Z
+      - rock-data:/var/cache/searxng:Z
+
+volumes:
+  rock-config:
+  rock-data:
