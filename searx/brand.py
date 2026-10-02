@@ -22,11 +22,11 @@ class BrandCustom(msgspec.Struct, kw_only=True, forbid_unknown_fields=True):
 class ThemeColors(msgspec.Struct, kw_only=True, forbid_unknown_fields=True):
     """Custom settings for theme colors in the brand section."""
 
-    theme_color_light: str = "#3050ff"
+    theme_color_light: str = "#000"
     background_color_light: str = "#fff"
-    theme_color_dark: str = "#58f"
-    background_color_dark: str = "#222428"
-    theme_color_black: str = "#3050ff"
+    theme_color_dark: str = "#fff"
+    background_color_dark: str = "#000"
+    theme_color_black: str = "#fff"
     background_color_black: str = "#000"
 
 
